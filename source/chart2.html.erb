@@ -1,0 +1,54 @@
+<%= partial "header" %>
+<% content_for :callScriptsHead do %>
+<% end %>
+
+<div class="hero-img">
+	<!-- <img src="assets/images/aurora.jpg" alt="Aurora"> -->
+	<!-- <div class="svg-text-wrap"> -->
+
+	<!-- </div> -->
+
+</div>
+
+<div class="container main">
+
+
+
+<div class="wrapper-100">
+	<div class="padded-content">
+		<button id="go">Go All</button>
+		<button id="go2">Go Sequence</button>
+	</div>
+	<div class="padded-content">
+	
+		<svg id="chartsvg"></svg>
+
+	</div>
+</div>
+	
+
+
+
+
+</div><!-- end container -->
+
+<!--Helper to include scripts in the footer for this page only -->
+<% content_for :callScripts do %>
+
+	<script>
+
+		
+	
+
+
+
+	</script>
+
+<% end %>
+
+<!--Helper to include JQuery in the footer for this page only.
+Note: $(function() already called -->
+<% content_for :footerscriptsInline do %>
+<% end %>
+
+<%= partial "footer" %>

@@ -1,0 +1,71 @@
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1" id="svg19431" viewBox="0 0 800 600" height="600" width="800">
+<style>
+.s0{
+	fill:#f2f2f2;
+	stroke:#f2f2f2;
+}
+.s1{
+	fill:none;
+	stroke:#000;
+}
+.s2{
+	display:inline;
+}
+.s3{
+	fill:#fff;
+	stroke:#008080;
+}
+
+</style>  <title id="title19547">
+    LineChart
+  </title>
+  <defs id="defs19433"/>
+  <metadata id="metadata19436"/>
+  <g transform="translate(0,-452.36216)" id="rects">
+    <rect ry="0" y="571" x="100" height="421" width="100" id="rect001" class="s0"/>
+    <rect ry="0" y="571" x="206" height="421" width="100" id="rect002" class="s0"/>
+    <rect ry="0" y="571" x="310" height="421" width="100" id="rect003" class="s0"/>
+    <rect ry="0" y="571" x="414" height="421" width="100" id="rect004" class="s0"/>
+    <rect ry="0" y="571" x="517" height="421" width="100" id="rect005" class="s0"/>
+  </g>
+  <g id="layer2">
+    <path id="path19441" d="m73 494 0 500 667 0" transform="translate(0,-452.36216)" class="s1"/>
+    <text id="text19443" y="507" x="30" transform="translate(0,-452.36216)" style="fill:#000;font-family:sans-serif;font-size:40;letter-spacing:0;line-height:125;word-spacing:0">
+      <tspan y="507" x="30" id="tspan19445" font-size="15">
+        30%
+      </tspan>
+    </text>
+  </g>
+  <g id="layer3" display="none">
+    <path id="path19447" d="m100 573 94 63 98 169 99 68 101-66 101-39 99-129" transform="translate(0,-452.36216)" class="s1"/>
+  </g>
+  <g id="paths" display="none">
+    <path id="path001" d="m101 117 98 101" class="s1"/>
+    <path id="path002" d="m206 222 98 112" class="s1"/>
+    <path id="path003" d="m310 337 98 52" class="s1"/>
+    <path id="path004" d="m414 389 96-44" class="s1"/>
+    <path id="path005" d="M514 341 617 211" class="s1"/>
+  </g>
+  <g id="antiMask" display="none">
+    <path d="m99 43 0 74 106 106 103 114 104 54 104-49 101-132 0-164z" id="path19550" class="s1"/>
+  </g>
+  <g id="circles" display="inline">
+    <circle r="5" cy="542" cx="103" id="circle000" class="s3"/>
+    <circle r="5" cy="542" cx="203" id="circle001" class="s3"/>
+    <circle r="5" cy="542" cx="307" id="circle002" class="s3"/>
+    <circle r="5" cy="542" cx="411" id="circle003" class="s3"/>
+    <circle r="5" cy="542" cx="514" id="circle004" class="s3"/>
+    <circle r="5" cy="542" cx="616" id="circle005" class="s3"/>
+    <!-- <circle r="5" cy="220" cx="203" id="circle001" class="s3"/>
+    <circle r="5" cy="336" cx="307" id="circle002" class="s3"/>
+    <circle r="5" cy="343" cx="514" id="circle003" class="s3"/>
+    <circle r="5" cy="389" cx="411" id="circle004" class="s3"/>
+    <circle r="5" cy="211" cx="616" id="circle005" class="s3"/> -->
+  </g>
+  <g id="mask2" display="none">
+    <path id="maskPath" d="m99 540 0-422 105 105 104 115 104 53 104-49 102-134 0 333z" style="fill-rule:evenodd;fill:#f2f2f2;stroke:#f2f2f2"/>
+  </g>
+    <g id="newline001">
+    <path id="newPath001" d="M100.5 116.6 201.5 221.2 307.6 337.4 411.1 389.4 515.2 341.4 618.2 210.1" class="s1"/>
+  </g>
+</svg>

@@ -16,7 +16,7 @@
     <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <script src="assets/scripts/modernizr-2.8.3.min.js" type="text/javascript"></script>
+    <script src="assets/scripts/modernizr-svg.min.js" type="text/javascript"></script>
     <!-- // <script src="https://cdn.jsdelivr.net/vivus/0.3.0/vivus.min.js"></script> -->
     
     
@@ -45,12 +45,36 @@
                 </ul> 
             </section>
             
-            <nav class="main-nav clearfix">
+            <nav class="mainMenu clearfix">
+                 <label for="toggleMenu" class="menuTitle">
+                        
+                        <!-- animicon -->
+                        <span class="svg-icon svg-icon-burger" data-icon-name="burger" id="svg-burger">
+                            <!-- <svg id="testSVG"></svg> -->
+                            <!-- <img src="assets/images/burger.svg" alt="burger"> -->
+
+                            <!-- <object type="image/svg+xml" data="assets/images/burger.svg" class="logo"></object> -->
+
+                            <!-- using snap svg -->
+                            <!-- <svg id="burgerSnap"></svg> -->
+
+                        </span>
+
+                 </label>
+                 <input type="checkbox" id="toggleMenu" />
                 <ul class="main-nav-links">
-                    <li><a href="index.html">link</a></li>
-                    <li><a href="svgTest2.html">link</a></li>
-                    <li><a href="svgTest3.html">link</a></li>
-                    <li><a href="#">chain</a></li>
+                    <li><a href="index.html">link1</a>
+                        <ul>
+                            <li><a href="chart1.html">sub1</a></li>
+                            <li><a href="chart2.html">lineChart1</a></li>
+                            <li><a href="#">sub3</a></li>
+                            <li><a href="#">sub4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="svgTest2.html">link2</a></li>
+                    <li><a href="svgTest3.html">link3</a></li>
+                    <li><a href="svgLogo-plugin-lite.html">link4</a></li>
+                    <li><a href="svgLogo-css.html">link5</a></li>
                 </ul>
             </nav>
         
@@ -156,6 +180,11 @@ Note: $(function() already called -->
 
 <script src="https://cdn.jsdelivr.net/vivus/0.3.0/vivus.min.js"></script>
 
+<script src="assets/scripts/menu.js"></script>
+
+<script src="assets/scripts/snap.svg-min.js"></script>
+<script src="assets/scripts/svgicons.js"></script>
+
  
 	
 <script>
@@ -163,6 +192,7 @@ Note: $(function() already called -->
 	// function(){
   	document.getElementById('svg02').style.visibility = 'visible';
   // }
+
 
 
 </script>
@@ -178,6 +208,15 @@ $(function() {
 			
 	
 })
+</script>
+
+<script>
+	
+$(function() {
+	toggleChildren();
+	// responsiveMenu();
+})
+
 </script>
 
 

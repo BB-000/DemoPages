@@ -176,9 +176,10 @@ header {
 .top-banner {
 	height: $headerHeight;
 	background-color: rgba(255, 255, 255, 0.3);
-	padding: 0 $setSpacing;
+	// padding: 0 $setSpacing;
 	.container {
 		height: 100%;
+		position: relative;
 	}
 }
 .main-title {
@@ -186,7 +187,7 @@ header {
 	font-family: $secondaryFont;
 	font-size:32px;
 	line-height: $headerHeight;
-	padding: 0;
+	padding: 0 0 0 $setSpacing;
 	text-align: left;
 	a {
 		color: #000000;
@@ -197,40 +198,43 @@ header {
 		}
 	}
 }
-.main-nav {
-	height: 100%;
-}
-.main-nav-links {
-	display: inline-block;
-	float: right;
-	height: 100%;
-	list-style-type: none;
-	padding: 0;
-	// margin-top: 12px;
 
-	li {
-		display: inline-block;
-		height: 100%;
-		padding-left: $setSpacing * 2;
-		&:first-child {
-			padding-left: 0;
-		}
-	}
 
-	a {
-		color: #000000;
-		display: inline-block;
-		height: 100%;
-		line-height: $headerHeight;
-		padding: 0 20px;
-		text-decoration: none;
-		transition: color .5s;
+// .mainMenu {
+// 	height: 100%;
+// }
+// .main-nav-links {
+// 	display: inline-block;
+// 	float: right;
+// 	height: 100%;
+// 	list-style-type: none;
+// 	padding: 0;
+// 	// margin-top: 12px;
 
-		&:hover {
-			color: #00B254;
-		}
-	}
-}
+// 	li {
+// 		display: inline-block;
+// 		height: 100%;
+// 		padding-left: $setSpacing * 2;
+// 		&:first-child {
+// 			padding-left: 0;
+// 		}
+// 	}
+
+// 	a {
+// 		color: #000000;
+// 		display: inline-block;
+// 		height: 100%;
+// 		line-height: $headerHeight;
+// 		padding: 0 20px;
+// 		text-decoration: none;
+// 		transition: color .5s;
+
+// 		&:hover {
+// 			color: #00B254;
+// 		}
+// 	}
+// }
+
 
 .container.main {
 	position: relative;
@@ -254,6 +258,8 @@ header {
 .icon-atrib {
 	font-size: 12px;
 	text-align: center;
+	float: left;
+    width: 100%;
 	a {
 		color: #3F0074;
 		text-decoration: none;
@@ -305,6 +311,11 @@ footer {
   font-size: .5em;
   }
 
+
+// SVG color array
+$colors: #360745, #D61C59, #E7D84B, #EFEAC5, #1B8798;
+$colorsV2: #000000, #750000, #C51101, #FF6700, #F1AF01;
+
 $max: 5;
 $stroke-step: 7%; 
 .text-copy {
@@ -355,17 +366,24 @@ $stroke-step: 7%;
     visibility: hidden;
 }
 
+#svg01 {
+	width: 100%;
+	height: 100%;
+	padding: 80px 40px 40px 40px;
+}
 
 
 
 
 
+// Simple way of animating a line being drawn - set the stroke values so the line is not visible, 
+// then animate the stroke-dashoffset back to 0
 .svgTest.tree path {
 	stroke-dashoffset: 11850px;  
 	stroke-dasharray: 11850px;
-	stroke: #ffff00;
+	stroke: #000;
 	stroke-width: 10px;
-	fill-opacity: 0.2;
+	fill-opacity: 0;
 
 	animation: tree-draw 10s linear forwards 4s;
 }
@@ -373,9 +391,74 @@ $stroke-step: 7%;
 @keyframes tree-draw {
   100% {
     stroke-dashoffset: 0;  
-    // stroke-dasharray: 11799px;
   }
 }
 
 
 
+////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////// SVG icons
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// fallback
+.no-svg .svg-icon-burger { background-image: url('../images/burger.png') }
+
+span.svg-icon {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-top: 12px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	float: right;
+}
+
+#burgerSVG {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+// Cannot animate svg paths using css
+
+// @keyframes burger-draw1 {
+// 	from : { val : '{"path" : "m 5.0916789,20.818994 53.8166421,0"}' }
+// 	to : { val : '{"path" : "M 12.972944,50.936147 51.027056,12.882035"}' }
+// }
+
+// @keyframes burger-draw2 {
+// 	from : { val : '{"transform" : "s1 1", "opacity" : 1}', before : '{"transform" : "s0 0"}' } 
+// 	to : { val : '{"opacity" : 0}' }
+// }
+
+// @keyframes burger-draw3 {
+// 	from : { val : '{"path" : "m 5.0916788,42.95698 53.8166422,0"}' } 
+// 	to : { val : '{"path" : "M 12.972944,12.882035 51.027056,50.936147"}' }
+// }
+
+// .ham-close {
+// 	path:nth-child(1) {
+// 		animation: burger-draw1 10s linear forwards 4s;
+// 	}
+// 	path:nth-child(2) {
+// 		animation: burger-draw2 10s linear forwards 4s;
+// 	}
+// 	path:nth-child(3) {
+// 		animation: burger-draw3 10s linear forwards 4s;
+// 	}
+// }
+
+
+
+
+
+#chartsvg {
+	width: 100%;
+	height: 600px;
+}

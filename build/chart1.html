@@ -146,23 +146,13 @@
 
 <div class="wrapper-100">
 	<div class="padded-content">
-	<h2 class="center">Words</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta pariatur alias veniam adipisci explicabo, nemo magni ducimus sequi. Ducimus, architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem et, enim hic impedit ea eum suscipit nihil error magnam nobis odit deserunt, recusandae eius placeat dolorum, facere quo sunt quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, unde. Saepe necessitatibus exercitationem ipsa nam reiciendis ut a sapiente maxime, perspiciatis cum, ratione fugiat cupiditate accusamus ipsam, quo! Fugiat beatae, error accusantium. Velit maiores, nihil consequuntur dignissimos cumque placeat! Delectus eius obcaecati aliquid a praesentium? Illum autem consectetur incidunt, sint qui odit animi, ea laudantium voluptatibus quaerat rerum dolore quia?</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, dicta placeat. Vero quod in laborum quaerat magni animi optio reiciendis, fugit eaque architecto iusto molestias reprehenderit id sit ullam ipsa aut laboriosam amet eius minima, itaque expedita mollitia tempore? Officia dolor, molestias esse iure libero, ea perferendis eos! Facere, voluptate?</p>
+	
+		<svg id="chartsvg"></svg>
+
 	</div>
 </div>
 	
 
-<div class="svg-block">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 64 64" xml:space="preserve" id="">
-	<path d="M30.7 28.8l-2.8-0.7c0.9-1.1 1.7-2.4 2.3-3.8 1-0.2 2-1 2.1-2.9 0.1-1.6-0.4-2.4-1-2.8v-4.6c1.7-1 3.3-3 3.3-5.3 0-3.5-3.1-6.3-6.6-5.9C27 1.2 25.1 0 23 0c-2.1 0-4 1.2-5 3 -3.5-0.4-6.6 2.4-6.6 5.9 0 2.3 1.6 4.3 3.3 5.3v4.6c-0.6 0.4-1.1 1.1-1 2.8 0.2 1.9 1.1 2.7 2.1 2.9 0.6 1.4 1.3 2.7 2.3 3.8l-2.8 0.7c-4.2 1.1-7.2 4.9-7.2 9.2v5.3c0 1.5 1.2 2.6 2.7 2.6h24.5c1.5 0 2.6-1.2 2.6-2.6v-5.3C37.9 33.7 34.9 29.9 30.7 28.8zM14.9 44.4h-4.1c-0.6 0-1.1-0.5-1.1-1.1v-5.3c0-3.4 2.1-6.3 5.2-7.4L14.9 44.4 14.9 44.4zM15.8 12.9c-1.4-0.6-2.8-2.3-2.8-4 0-2.7 2.5-4.8 5.2-4.2l0.6 0.1 0.3-0.6c0.7-1.5 2.2-2.6 3.8-2.6 1.7 0 3.2 1.1 3.8 2.6l0.3 0.6 0.6-0.1c2.7-0.6 5.2 1.5 5.2 4.2 0 1.8-1.4 3.4-2.8 4l-0.4 0.2v4.2H23h-6.7v-4.2L15.8 12.9zM16.4 19h6.6 6.6c0 0.2 0 0.3 0 0.5 0 4.2-2.9 9.6-6.6 9.6 -3.7 0-6.6-5.4-6.6-9.6C16.4 19.3 16.4 19.2 16.4 19zM36.3 43.3c0 0.6-0.5 1.1-1.1 1.1h-18.7V30.2l3-0.7c1.1 0.8 2.2 1.3 3.5 1.3 1.3 0 2.5-0.5 3.5-1.3l3.8 1c3.5 0.9 6 4 6 7.7V43.3z" fill="#260026"/>
-	<circle cx="19.5" cy="35.3" r="1.2" fill="#260026"/>
-	<circle cx="19.5" cy="40.1" r="1.2" fill="#260026"/>
-	<circle cx="24.3" cy="35.3" r="1.2" fill="#260026"/>
-	<circle cx="24.3" cy="40.1" r="1.2" fill="#260026"/>
-	<path d="M21.2 25.1h1.8 1.8c0.5 0 0.8-0.3 0.8-0.8 0-0.9-0.7-1.5-1.6-1.5h-1 -1c-0.9 0-1.6 0.7-1.6 1.5C20.4 24.8 20.8 25.1 21.2 25.1z" fill="#260026"/>
-</svg>
-</div>
 
 
 
@@ -195,7 +185,23 @@ Note: $(function() already called -->
 		document.getElementById('textfx1').style.visibility = 'visible';
 	// };
 	
-	// responsiveMenu();   // Why does calling this add display : none to desktop .mainMenu ul too?
+
+	// window.onload = function() {
+
+
+		var s = new Snap('#chartsvg');
+
+		var chart = Snap.load("assets/images/chartOpt1.svg", function(f) {
+			s.append(f);
+		})
+
+		var bar1 = s.select('rect');
+
+		bar1.attr({stroke: "#ff0000"});
+
+
+
+	// }
 
 	</script>
 

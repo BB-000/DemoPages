@@ -1,0 +1,115 @@
+<%= partial "header" %>
+<% content_for :callScriptsHead do %>
+<% end %>
+
+<div class="hero-img">
+	<!-- <img src="assets/images/aurora.jpg" alt="Aurora"> -->
+	<!-- <div class="svg-text-wrap"> -->
+
+	<svg class="textFX1" id="textfx1" viewBox="0 0 800 600">
+	  <symbol id="s-text">
+	    <text text-anchor="middle"
+	          x="50%"
+	          y="35%"
+	          class="text--line"
+	          >
+	      Lovely
+	    </text>
+	    <text text-anchor="middle"
+	          x="50%"
+	          y="68%"
+	          class="text--line2"
+	          >
+	      SVG
+	    </text>
+	    
+	  </symbol>
+	  
+	  <g class="g-ants">
+	    <use xlink:href="#s-text"
+	      class="text-copy"></use>     
+	    <use xlink:href="#s-text"
+	      class="text-copy"></use>     
+	    <use xlink:href="#s-text"
+	      class="text-copy"></use>     
+	    <use xlink:href="#s-text"
+	      class="text-copy"></use>     
+	    <use xlink:href="#s-text"
+	      class="text-copy"></use>     
+	  </g>
+	  
+	</svg>
+
+	<!-- </div> -->
+
+</div>
+
+<div class="container main">
+
+<div class="wrapper-container with-margin">
+	<div class="padded-content">
+	<div class="wrapper-33">
+		<h2 class="center">One</h2>
+		<p>Animate Svg Logo using snap.svg.js &amp; helper function. Modified to allow animation to be triggered by any function </p>
+	</div>
+	<div class="wrapper-33">
+		<h2 class="center">Two</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi explicabo assumenda veniam ab laborum, praesentium in laboriosam, aliquam esse temporibus? Delectus veritatis molestiae minus ea quos aliquam, voluptas deserunt debitis nisi alias illo, suscipit voluptatum quam facilis animi repellat necessitatibus!</p>
+	</div>
+	<div class="wrapper-33">
+		<h2 class="center">Three</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quas impedit repellat non debitis accusamus temporibus repellendus. Earum, voluptates, fuga qui possimus tenetur quo hic numquam ex culpa tempora iure, non. Ea porro alias perspiciatis voluptatum ducimus, asperiores similique. Voluptatum!</p>
+	</div>
+	</div>
+</div>
+
+<div class="wrapper-100">
+	<div class="padded-content">
+	
+		<svg id="chartsvg"></svg>
+
+	</div>
+</div>
+	
+
+
+
+
+</div><!-- end container -->
+
+<!--Helper to include scripts in the footer for this page only -->
+<% content_for :callScripts do %>
+
+	<script>
+	// document.onload = function(){
+		document.getElementById('textfx1').style.visibility = 'visible';
+	// };
+	
+
+	// window.onload = function() {
+
+
+		var s = new Snap('#chartsvg');
+
+		var chart = Snap.load("assets/images/chartOpt1.svg", function(f) {
+			s.append(f);
+		})
+
+		var bar1 = s.select('rect');
+
+		bar1.attr({stroke: "#ff0000"});
+
+
+
+	// }
+
+	</script>
+
+<% end %>
+
+<!--Helper to include JQuery in the footer for this page only.
+Note: $(function() already called -->
+<% content_for :footerscriptsInline do %>
+<% end %>
+
+<%= partial "footer" %>

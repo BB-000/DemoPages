@@ -90,6 +90,7 @@ $outerContainer: 2000px; /*Set container and desktop variable for media queries*
 $setSpacing: 12px; /*Set global spacing*/
 
 $headerHeight: 72px;
+$submenuHeight: 36px;
 
 /*Colours*/
 $red:#8C1C13;
@@ -102,9 +103,8 @@ $creamDark:#735751;
 $paleBG:#EAE7F3;
 $orange:#FF9A00;
 
-// SVG color array
-$colors: #360745, #D61C59, #E7D84B, #EFEAC5, #1B8798;
-$colorsV2: #000000, #750000, #C51101, #FF6700, #F1AF01;
+
+
 
 /*Universal Classes*/
 .primary-font {font-family:$primaryFont!important;}

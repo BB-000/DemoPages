@@ -8,6 +8,11 @@
 
 <script src="https://cdn.jsdelivr.net/vivus/0.3.0/vivus.min.js"></script>
 
+<script src="assets/scripts/menu.js"></script>
+
+<script src="assets/scripts/snap.svg-min.js"></script>
+<script src="assets/scripts/svgicons.js"></script>
+
 <% if content_for?(:callScripts) %> 
 	<%= yield_content :callScripts %>
 <% end %>
@@ -21,6 +26,15 @@ $(function() {
 			<%= yield_content :footerscriptsInline %>
 	<% end %>
 })
+</script>
+
+<script>
+	
+$(function() {
+	toggleChildren();
+	// responsiveMenu();
+})
+
 </script>
 
 
