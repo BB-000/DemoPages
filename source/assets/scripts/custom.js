@@ -245,6 +245,22 @@ function animateSvg01() {
 		}
 
 
+		var goDotX = function(dot, y) {
+			console.log(dot);
+
+			dot.animate({
+				cy: y
+			}, 1000)
+		}
+
+		var animateDots = function() {
+			goDotX(dot0, 117);
+			setTimeout(goDotX(dot1, 220), 2000);
+			setTimeout(goDotX(dot2, 336), 4000);
+		}
+
+
+
 		var animateDotsAll = function() {
 
 			dot0.animate({
